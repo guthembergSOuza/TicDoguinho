@@ -12,30 +12,7 @@
     <h:body>
         
         <ui:include src="menuUsuario.xhtml" />
-        <b:form id="formAlertaUsuario">
-        <b:panelGrid colSpans="4,4,4">
-            
-            <c:forEach items="#{alertaController.readAlertas(loginController.usuarioLogado)}"
-                       var="alerta">
-                
-                <b:panel title="Alerta Inserido em: #{alerta.dataInsersaoFormated}"
-                         look="#{(alerta.acolhedor eq null)?'danger':'primary'}">
-                    
-                    <h:outputText value="Descrição do alerta: #{alerta.descricaoInicial}"/><br/>
-                    
-                    <h:outputText value="Informações do Doguino: #{alerta.doguinho.cor} - 
-                                  #{alerta.doguinho.identificacao} - #{alerta.doguinho.deficienciaAparente}"/><br/>
-                    
-                
-                    <b:commandButton value="detalhar alerta">
-                        <f:setPropertyActionListener value="#{alerta}" target="#{alertaController.selected}"/>
-                    </b:commandButton>
-                </b:panel>
-                
-            </c:forEach>
-            
-        </b:panelGrid>
-        </b:form>
+       
     </h:body>
 </html>
 
