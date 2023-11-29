@@ -16,7 +16,7 @@ public class Pet {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int codigo;
     @Column
-    private String usuario;
+    private String nome;
     @Column
     private String mesAnoNascimento;
     @Column
@@ -30,12 +30,12 @@ public class Pet {
         this.codigo = codigo;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getNome() {
+        return nome;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getMesAnoNascimento() {
